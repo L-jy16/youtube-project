@@ -7,7 +7,9 @@ const Header = () => {
     return (
         <header id='header' role='banner'>
             <Logo />
+
             <Menu />
+
             <Sns />
         </header>
     )

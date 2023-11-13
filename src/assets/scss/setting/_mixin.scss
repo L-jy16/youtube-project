@@ -21,7 +21,7 @@
 }
 
 // 두줄 이상
-@mixin line($line){
+@mixin line($line) {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
