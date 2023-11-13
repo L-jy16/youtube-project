@@ -1,10 +1,10 @@
 import React from 'react'
-// import Search from './Search'
+import Search from './Search'
 
 const Main = (props) => {
     return (
         <main id='main' role='main'>
-            {/* <Search /> */}
+            <Search />
             {props.children}
         </main>
     )
