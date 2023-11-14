@@ -1,0 +1,77 @@
+#youtuber {
+    h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+
+.animation__inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    .animation {
+        // margin-right: 20px;
+
+        .animation__img {
+            // width: 150px;
+            // height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+
+        .animation__info {
+            // width: 150px;
+            text-align: center;
+            padding-bottom: 20px;
+            box-sizing: border-box;
+            padding-top: 5px;
+        }
+    }
+}
+
+#youtuberPage {
+    .animation__inner {
+        .animation {
+            margin-right: 20px;
+            width: 150px;
+
+            .animation__img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .animation__inner {
+            justify-content: space-between;
+
+            .animation {
+                width: 23%;
+                margin-right: 0;
+
+                .animation__img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .animation__inner {
+            .animation {
+                width: 31%;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .animation__inner {
+            .animation {
+                width: 48%;
+            }
+        }
+    }
+}

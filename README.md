@@ -4,3 +4,6 @@
 
 # 설치
 설치 프로그램(한꺼번에 설치) `npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper`
+
+# swiper
+swiper을 사용하여 메인화면의 유튜버 

@@ -15,12 +15,12 @@ export const menuText = [
     {
         title: "오늘의 추천 애니",
         icon: <DiMozilla />,
-        src: "/Today"
+        src: "/today"
     },
     {
         title: "리뷰 유튜버 추천",
         icon: <DiProlog />,
-        src: "/Youtuber"
+        src: "/youtuber"
     }
 ];
 

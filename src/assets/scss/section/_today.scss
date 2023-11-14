@@ -1,19 +1,90 @@
-#today {}
-
 .today__inner {
     display: flex;
-    background-color: var(--black500);
+    // border: 1px solid var(--primary-color100);
+    justify-content: space-between;
+    margin-bottom: 50px;
 
     .today__thumb {
-        width: 40%;
-        background-image: url(https://i.ytimg.com/vi/2Nr5fNS9KCY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAM-YmY3C31mRNCuPBC-S9fXQQ0Uw);
+        width: 39%;
+        height: 310px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+
+        img {
+            height: 100%;
+        }
     }
 
     .today__text {
         width: 60%;
         height: 310px;
+        border: 1px solid var(--primary-color100);
+        padding: 10px 20px;
+        box-sizing: border-box;
+        position: relative;
+
+        .today {
+            display: inline-block;
+            margin: 10px auto;
+            font-weight: bold;
+            font-size: 1rem;
+            background: var(--primary-color300);
+            color: var(--white);
+            padding: 5px 10px;
+            box-sizing: border-box;
+            border-radius: 50px;
+
+            @media (max-width: 1200px) {
+                margin: 5px auto;
+                font-size: 0.8rem;
+            }
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 20px 0 10px 0;
+
+            @media (max-width: 1200px) {
+                margin: 10px 0 5px 0;
+                font-size: 1rem;
+            }
+        }
+
+        .desc {
+            font-size: 1rem;
+            color: var(--primary-color300);
+
+            @media (max-width: 1200px) {
+                font-size: 0.8rem;
+            }
+        }
+
+        .info {
+            position: absolute;
+            left: 25px;
+            bottom: 20px;
+
+            .autho {
+                padding: 2px 5px;
+                font-weight: bold;
+                font-size: 1.2rem;
+                font-family: var(--mainfont-nexon);
+
+                @media (max-width: 1200px) {
+                    font-size: 0.9rem;
+                }
+
+            }
+
+            .data {
+                font-size: 0.7rem;
+
+                @media (max-width: 1200px) {
+                    font-size: 0.5rem;
+                }
+            }
+        }
     }
 }
