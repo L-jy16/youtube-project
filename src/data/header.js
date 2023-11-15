@@ -31,14 +31,14 @@ export const keywordText = [
         src: "/search/아카캉",
     },
     {
-        title: "무비드라이브",
+        title: "나롱이네",
         icon: <AiOutlineRightCircle />,
-        src: "/search/무비드라이브",
+        src: "/search/나롱이네",
     },
     {
-        title: "빠퀴",
+        title: "애니 다락방",
         icon: <AiOutlineRightCircle />,
-        src: "/search/빠퀴",
+        src: "/search/애니 다락방",
     },
     {
         title: "미애니마니아",
@@ -51,9 +51,9 @@ export const keywordText = [
         src: "/search/료핸 다이어리",
     },
     {
-        title: "리뷰하는 여자_아리꼬",
+        title: "이리와뷰",
         icon: <AiOutlineRightCircle />,
-        src: "/search/리뷰하는 여자_아리꼬",
+        src: "/search/이리와뷰",
     },
     {
         title: "모두의 명작",
@@ -61,9 +61,9 @@ export const keywordText = [
         src: "/search/모두의 명작",
     },
     {
-        title: "애니집합소",
+        title: "작은방 덕후",
         icon: <AiOutlineRightCircle />,
-        src: "/search/애니집합소",
+        src: "/search/작은방 덕후",
     },
     {
         title: "유니애니",
