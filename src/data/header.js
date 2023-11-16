@@ -31,9 +31,9 @@ export const keywordText = [
         src: "/search/아카캉",
     },
     {
-        title: "나롱이네",
+        title: "애니집합소",
         icon: <AiOutlineRightCircle />,
-        src: "/search/나롱이네",
+        src: "/search/애니집합소",
     },
     {
         title: "애니 다락방",

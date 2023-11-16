@@ -4,6 +4,10 @@
     border-bottom: 1px dashed var(--primary-color400);
     box-sizing: border-box;
 
+    @media (max-width:800px) {
+        padding: 15px 20px;
+    }
+
     label {
         display: none;
     }
@@ -18,6 +22,7 @@
         border: 2px solid var(--primary-color200);
         color: var(--primary-color);
         font-weight: bold;
+        outline: var(--primary-color200);
 
         &::placeholder {
             color: var(--primary-color200);

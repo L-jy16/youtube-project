@@ -1,0 +1,89 @@
+.channel__inner {
+
+    .channel__header {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        background-position: center center;
+
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        @media(max-width:800px) {
+            .channel__header {
+                height: 150px;
+            }
+
+            .circle {
+                width: 150px;
+                height: 150px;
+            }
+
+        }
+    }
+
+    .channel__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed var(--primary-color);
+        margin-bottom: 30px;
+
+        .title {
+            margin-top: 100px;
+            display: block;
+            font-weight: 800;
+            font-size: 1.3rem;
+
+            @media(max-width:800px) {
+                margin-top: 70px;
+            }
+        }
+
+        .desc {
+            width: 55%;
+            margin: 10px auto;
+            display: block;
+            font-size: 0.8rem;
+        }
+
+        .info {
+            margin-top: 15px;
+
+            span {
+                border: 1px solid var(--primary-color);
+                padding: 5px 8px;
+                margin-left: 5px;
+                border-radius: 50px;
+                background-color: var(--primary-color);
+                color: var(--white);
+                font-size: 0.9rem;
+                line-height: 1.2;
+
+                svg {
+                    width: 23px;
+                    height: 23px;
+                    vertical-align: top;
+                    padding: 2px;
+                }
+
+            }
+        }
+    }
+
+    .channel__more {}
+}

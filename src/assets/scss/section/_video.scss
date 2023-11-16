@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
+    min-height: 100vh;
 
     .video {
         margin-bottom: 50px;
@@ -14,6 +15,7 @@
             width: 95%;
 
             a {
+                margin-top: 2.2%;
                 display: block;
                 cursor: pointer;
                 width: 100%;
@@ -35,16 +37,19 @@
                 a {
                     font-weight: bold;
                     margin-bottom: 5px;
-                    @include line(2);
+                    @include line(1);
                 }
             }
 
             .info {
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 2%;
+
 
                 .author {
                     text-decoration: underline;
+                    text-underline-position: under;
                 }
 
                 .author:hover {
@@ -59,6 +64,80 @@
         }
     }
 
+    .channel .video__info {
+        .info {
+            display: none;
+        }
+    }
+
+
+}
+
+
+@media (max-width: 1400px) {
+    .video__inner {
+        grid-template-columns: repeat(3, 32%);
+        gap: 15px;
+
+        .video {
+            .video__thumb {}
+
+            .video__info {
+                .title {
+                    a {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .info {
+                    font-size: 0.8rem;
+
+                    .author {}
+                }
+
+                .desc {
+                    font-size: 0.8rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .video__inner {
+        grid-template-columns: repeat(2, 49%);
+        gap: 10px;
+
+        .video {
+            .video__thumb {}
+
+            .video__info {
+                .title {
+                    a {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .info {
+                    font-size: 0.8rem;
+
+                    .author {}
+                }
+
+                .desc {
+                    font-size: 0.8rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .video__inner {
+        grid-template-columns: repeat(1, 100%);
+    }
 }
 
 // 비디오 더보기
@@ -161,4 +240,110 @@
     }
 
 
+}
+
+#videoPage {
+    h2 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .video__View {
+        padding: 0;
+
+        .video__play {
+            width: 100%;
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+
+        .video__info {
+            .video__title {
+                padding-top: 15px;
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+
+            .video__channel {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 1.1rem;
+
+                .id {
+                    font-weight: 800;
+                    margin: 10px 0;
+                    font-size: 1.1rem;
+                }
+
+                .count {
+                    margin-top: 10px;
+
+                    span {
+                        font-size: 1.1rem;
+                        padding: 0 5px;
+                        border-left: 1px solid var(--primary-color600);
+                    }
+
+                    svg {
+                        width: 25px;
+                        height: 25px;
+                        vertical-align: top;
+                    }
+                }
+
+                span:first-child {
+                    border: 0;
+                }
+
+                .video__desc {
+                    width: 100%;
+                    border-bottom: 1px dashed var(--primary-color);
+                    border-top: 1px dashed var(--primary-color);
+                    padding: 10px;
+                    white-space: pre-line;
+                    font-size: 1rem;
+                    margin-bottom: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #videoPage {
+        .video__View {
+
+            .video__play {}
+
+            .video__info {
+                .video__title {
+                    font-size: 1.4rem;
+                }
+
+                .video__channel {
+
+                    .id {
+                        font-size: 1rem;
+                    }
+
+                    .count {
+
+                        span {
+                            font-size: 1rem;
+                        }
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .video__desc {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
 }
