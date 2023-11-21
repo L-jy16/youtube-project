@@ -39,7 +39,12 @@
 
 @media (max-width: 800px) {
     #header {
-        left: -250px;
+        left: -260px;
+        transition: all 0.3s ease-in;
+
+        &.show {
+            left: 0;
+        }
     }
 
     #main {
@@ -47,6 +52,7 @@
     }
 
     #footer {
+        width: 100%;
         padding: 10px 0;
     }
 }

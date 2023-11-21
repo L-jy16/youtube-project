@@ -13,6 +13,7 @@ const Video = () => {
 
     const { videoId } = useParams();
     const [videoDetail, setVideoDetail] = useState(null);
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetchFromAPI(`videos?part=snippet,statistics&id=${videoId}`)
@@ -20,15 +21,19 @@ const Video = () => {
                 console.log(data)
                 setVideoDetail(data.items[0])
             })
+            .finally(() => {
+                setLoading(false);
+            })
     }, [videoId])
 
+    const videoPageClass = loading ? 'isLoading' : 'isLoaded';
 
     return (
         <Main
             title="애니메이션 리뷰 유튜버 채널"
             description="애니메이션 리뷰 유튜버의 영상을 볼 수 있는 페이지입니다."
         >
-            <section id='videoPage'>
+            <section id='videoPage' className={videoPageClass}>
                 <h2 className='blind'>비디오</h2>
                 {videoDetail && (
                     <div className='video__View'>

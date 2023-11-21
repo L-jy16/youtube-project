@@ -10,7 +10,7 @@
             width: 50px;
             height: 50px;
             margin-right: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid var(--primary-color);
             background-color: #fff;
             color: var(--primary-color);
             position: relative;
@@ -161,4 +161,20 @@
         }
     }
 
+}
+
+@media (max-width: 800px) {
+    .header__logo {
+        border: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 94px;
+        background-color: var(--primary-color);
+    }
+
+    .header__menu {
+        border-top: 1px dashed var(--white300);
+        margin-top: 96px;
+    }
 }

@@ -58,7 +58,7 @@ const youtuber = () => {
                     {animationText.map((animation, key) => (
                         <SwiperSlide className="animation play__icon" key={key}>
                             <div className="animation__img">
-                                <Link to={`/chnnel/${animation.channelId}`}>
+                                <Link to={`/channel/${animation.channelId}`}>
                                     <img src={animation.img} alt={animation.author} />
                                 </Link>
                             </div>

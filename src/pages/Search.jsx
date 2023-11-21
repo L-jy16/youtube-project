@@ -9,9 +9,11 @@ const Search = () => {
   const { searchId } = useParams();
   const [videos, setVideos] = useState([]);
   const [nextpageToken, setNextPageToken] = useState(null);
+  const [loading, setLoading] = useState(null);
 
   useEffect(() => {
     setVideos([]);
+    setLoading(true);
     fetchVideos(searchId);
   }, [searchId]);
 
@@ -21,10 +23,12 @@ const Search = () => {
         setNextPageToken(data.nextPageToken)
         setVideos((prevVideos) => [...prevVideos, ...data.items])
         console.log(data)
+        setLoading(false);
       })
       .catch((error) => {
-        console.log("Error fetch data", error)
-      });
+        console.log("Error fetch data", error);
+        setLoading(false);
+      })
   }
 
   const handleLoadMore = () => {
@@ -32,6 +36,8 @@ const Search = () => {
       fetchVideos(searchId, nextpageToken);
     }
   };
+
+  const SearchPageClass = loading ? 'isLoading' : 'isLoaded';
 
   return (
     <Main
@@ -41,7 +47,7 @@ const Search = () => {
       <section id='searchPage'>
         <h2>✨ <em>{searchId}</em>검색 결과 페이지입니다. ✨</h2>
 
-        <div className='video__inner'>
+        <div className={`video__inner ${SearchPageClass}`}>
           <VideoSearch videos={videos} />
         </div>
 

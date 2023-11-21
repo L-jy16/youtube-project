@@ -1,8 +1,8 @@
 .search__inner {
     width: 100%;
     padding: 15px 40px;
-    border-bottom: 1px dashed var(--primary-color400);
     box-sizing: border-box;
+    border-bottom: 1px dashed var(--primary-color200);
 
     @media (max-width:800px) {
         padding: 15px 20px;
@@ -27,6 +27,34 @@
         &::placeholder {
             color: var(--primary-color200);
         }
+    }
+
+}
+
+#searchPage {
+    h2 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    #search {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: var(--white);
+        z-index: 1;
+    }
+
+    .search__inner {
+        width: 100%;
+        padding-left: 240px;
+        box-sizing: border-box;
+    }
+
+    #searchPage {
+        margin-top: 90px;
     }
 
 }
