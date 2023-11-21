@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import VideoSearch from '../components/video/VideoSearch';
 import { fetchFromAPI } from '../utils/api';
+import Main from '../components/section/Main';
 
 const Search = () => {
   const { searchId } = useParams();
@@ -33,18 +34,24 @@ const Search = () => {
   };
 
   return (
-    <section id='searchPage'>
-      <h2>✨ <em>{searchId}</em>검색 결과 페이지입니다. ✨</h2>
+    <Main
+      title="애니메이션 리뷰 검색페이지"
+      description="애니메이션 리뷰 유튜버 검색 페이지입니다."
+    >
+      <section id='searchPage'>
+        <h2>✨ <em>{searchId}</em>검색 결과 페이지입니다. ✨</h2>
 
-      <div className='video__inner'>
-        <VideoSearch videos={videos} />
-      </div>
+        <div className='video__inner'>
+          <VideoSearch videos={videos} />
+        </div>
 
-      <div className="video__more">
-        <button onClick={handleLoadMore}>- 더 보기 -</button>
-      </div>
+        <div className="video__more">
+          <button onClick={handleLoadMore}>- 더 보기 -</button>
+        </div>
 
-    </section>
+      </section>
+    </Main>
+
   )
 }
 
