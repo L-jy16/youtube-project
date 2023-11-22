@@ -3,8 +3,11 @@
 평소에 애니메이션을 좋아하고 즐겨보기 때문에 애니메이션과 관련된 사이트를 만들었습니다. <br />
 
 # 설치
-설치 프로그램(한꺼번에 설치) `npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper`
+설치 프로그램 `npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper`
 <br />
+
+# 기능
+postman와 youtubeAPI를 이용하여 선호하는 
 
 # postman
 Postman은 API 개발 및 테스트를 위한 협업 도구로, 주로 웹 API를 테스트하고 문서화하는 데 사용됩니다. Postman을 사용하면 API 요청을 만들고 테스트하며, 응답을 확인하고 문서를 작성할 수 있습니다.

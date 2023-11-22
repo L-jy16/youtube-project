@@ -72,7 +72,7 @@ const Video = () => {
                             <div className='video__comment'>
                                 <div className="comment__title">
                                     <h2>댓글</h2>
-                                    <button onClick={() => setShowComment(!showComment)}>{showComment ? '댓글 감추기' : '댓글 보기'}</button>
+                                    <button onClick={() => setShowComment(!showComment)}>{showComment ? '- 감추기 -' : '+ 보기 +'}</button>
                                 </div>
                                 {showComment && (
                                     <div>
