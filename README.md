@@ -62,5 +62,3 @@ const [nextpageToken, setNextPageToken] = useState(null); : nextpageToken이라�
 
 # Suspense
 리액트의 Suspense는 리액트에서 비동기적으로 로드되는 컴포넌트나 데이터에 대한 대기 상태를 관리하고 사용자 경험을 향상시키기 위한 기능입니다. 주로 코드 스플리팅(Code Splitting)과 함께 사용되며, 앱의 초기 로딩 시간을 최적화하고 필요한 자원을 효율적으로 관리하는 데 도움이 됩니다.
-
-컨퍼런트를 효율적으로 사용하기 위하여 사용하였습니다.

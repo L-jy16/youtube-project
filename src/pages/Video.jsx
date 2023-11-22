@@ -14,6 +14,8 @@ const Video = () => {
     const { videoId } = useParams();
     const [videoDetail, setVideoDetail] = useState(null);
     const [loading, setLoading] = useState(true)
+    const [comments, setComments] = useState([]);
+    const [showComment, setShowComment] = useState(false);
 
     useEffect(() => {
         fetchFromAPI(`videos?part=snippet,statistics&id=${videoId}`)
@@ -23,6 +25,12 @@ const Video = () => {
             })
             .finally(() => {
                 setLoading(false);
+            })
+
+        fetchFromAPI(`commentThreads?part=snippet&videoId=${videoId}`)
+            .then((data) => {
+                setComments(data.items);
+                console.log(data)
             })
     }, [videoId])
 
@@ -60,6 +68,26 @@ const Video = () => {
                                 <div className="video__desc">
                                     {videoDetail.snippet.description}
                                 </div>
+                            </div>
+                            <div className='video__comment'>
+                                <div className="comment__title">
+                                    <h2>댓글</h2>
+                                    <button onClick={() => setShowComment(!showComment)}>{showComment ? '댓글 감추기' : '댓글 보기'}</button>
+                                </div>
+                                {showComment && (
+                                    <div>
+                                        {comments.map((comment) => (
+                                            <div className="comment__all" key={comment.id}>
+                                                <div className="comment__nickname">
+                                                    {comment.snippet.topLevelComment.snippet.authorDisplayName}
+                                                </div>
+                                                <div className="comment__cont">
+                                                    {comment.snippet.topLevelComment.snippet.textOriginal}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

@@ -8,5 +8,7 @@
 .swiper-button-prev:after,
 .swiper-button-next:after {
     color: var(--white);
-    font-size: 25px;
+    font-size: 20px;
+    background-color: var(--primary-color400);
+    margin-top: -42px;
 }
