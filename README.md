@@ -11,7 +11,7 @@
 설치 프로그램 `npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper`
 <br />
 
-# 페이지별 기능 설명
+# 기능
 - search 기능
 - 댓글 불러온 기능
 - 비디오 출력
@@ -19,6 +19,7 @@
 - 메인에 유튜버들 출력하여 클릭하면 해당 유튜버 채널로 이동
 
 
+## 사용한 프로그램 
 ### postman
 Postman은 API 개발 및 테스트를 위한 협업 도구로, 주로 웹 API를 테스트하고 문서화하는 데 사용됩니다. Postman을 사용하면 API 요청을 만들고 테스트하며, 응답을 확인하고 문서를 작성할 수 있습니다.
 
