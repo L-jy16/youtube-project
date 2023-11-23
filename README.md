@@ -5,14 +5,13 @@
 <img src="https://l-jy16.github.io/youtube-project/src/assets/img/searchimg.png">
 
 # 미리보기
+사이트 미리보기 : https://lee-youtube-project.netlify.app/
 
 # 설치
 설치 프로그램 `npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper`
 <br />
 
 # 페이지별 기능 설명
-## Home
-
 - search 기능
 - 댓글 불러온 기능
 - 비디오 출력
@@ -20,8 +19,6 @@
 - 메인에 유튜버들 출력하여 클릭하면 해당 유튜버 채널로 이동
 
 
-
-# 사용한 프로그램 소개
 ### postman
 Postman은 API 개발 및 테스트를 위한 협업 도구로, 주로 웹 API를 테스트하고 문서화하는 데 사용됩니다. Postman을 사용하면 API 요청을 만들고 테스트하며, 응답을 확인하고 문서를 작성할 수 있습니다.
 
@@ -78,3 +75,15 @@ const [nextpageToken, setNextPageToken] = useState(null); : nextpageToken이라�
 
 ### Suspense
 리액트의 Suspense는 리액트에서 비동기적으로 로드되는 컴포넌트나 데이터에 대한 대기 상태를 관리하고 사용자 경험을 향상시키기 위한 기능입니다. 주로 코드 스플리팅(Code Splitting)과 함께 사용되며, 앱의 초기 로딩 시간을 최적화하고 필요한 자원을 효율적으로 관리하는 데 도움이 됩니다.
+
+### HelmetProvider
+HelmetProvider는 react-helmet-async 패키지에서 제공되는 컴포넌트입니다.<br />
+이 컴포넌트는 Helmet 컴포넌트의 상태를 관리하고, 여러 컴포넌트 간에 일관된 상태를 유지하는 역할을 합니다.<br />
+여러 컴포넌트에서 동적으로 변경되는 head 요소들을 관리하기 위해 사용됩니다.<br />
+보통 애플리케이션의 최상위 컴포넌트 또는 라우터의 최상위 컴포넌트로 감싸집니다.<br />
+
+### Helmet
+Helmet은 react-helmet-async 패키지에서 제공되는 컴포넌트로, 동적으로 문서의 head 부분을 조작하는 데 사용됩니다.<br />
+Helmet 컴포넌트를 사용하면 각 컴포넌트에서 페이지 제목, 메타 태그, 스타일 시트 등을 동적으로 변경할 수 있습니다.<br />
+예를 들어, title, meta, link 등의 head 요소를 동적으로 설정할 수 있어서 각 페이지마다 서로 다른 head 정보를 가질 수 있습니다.<br />
+Helmet은 HelmetProvider 컴포넌트로 감싸져야 하며, HelmetProvider가 제공하는 상태를 통해 head 정보를 동적으로 변경하고 업데이트할 수 있습니다.<br />
