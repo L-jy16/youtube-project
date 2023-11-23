@@ -2,6 +2,8 @@
 유튜브 API를 이용해서 애니메이션 관련 사이트를 만들겠습니다.<br />
 평소에 애니메이션을 좋아하고 즐겨보기 때문에 애니메이션과 관련된 사이트를 만들었습니다. <br />
 
+<img src="https://l-jy16.github.io/youtube-project/src/assets/img/searchimg.png">
+
 # 미리보기
 
 # 설치
