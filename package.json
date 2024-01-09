@@ -41,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "유튜브 API를 이용해서 애니메이션 관련 사이트를 만들겠습니다.<br />\r 평소에 애니메이션을 좋아하고 즐겨보기 때문에 애니메이션과 관련된 사이트를 만들었습니다. <br />",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
